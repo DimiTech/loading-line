@@ -15,8 +15,8 @@
     		margin: 0 auto;
     		width: 300px;
     		padding-top: 3%;
-    		background-color: #111;
-			color: #fff;
+    		background-color: #fee;
+			color: #333;
     		font-family: Arial, sans-serif;
     		text-align: center;
     	}
@@ -35,14 +35,12 @@
 		var loadingLineDiv = document.getElementById('loading-line');
 		var loadingLine = new LoadingLine({
 			div: loadingLineDiv,
-			minWidth: 8
+			percent: 70
 		});
 
 		// The 'short' way of initializing the widget
 		var loadingLine2 = new LoadingLine({
-			div: $('#loading-line2'),
-			percent: 0,
-			minWidth: 8
+			div: $('#loading-line2')
 		});
 
 
