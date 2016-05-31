@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Loading Line Demo</title>
+
+    <link href="../css/loading-line.css" type="text/css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/loading-line.js" type="text/javascript"></script>
+
+    <!-- Just some quick CSS -->
+    <style type="text/css">
+    	body {
+    		margin: 0 auto;
+    		width: 300px;
+    		padding-top: 3%;
+    		background-color: #ddd;
+    		font-family: Arial, sans-serif;
+    		text-align: center;
+    	}
+    </style>
+
+</head>
+<body>
+
+	<h2>Demo 1:</h2>
+
+	<div id="loading-line"></div>
+	<div id="loading-line2"></div>
+	
+	<script type="text/javascript">
+		// The 'long' way of initializing the widget
+		var loadingLineDiv = document.getElementById('loading-line');
+		var loadingLine = new LoadingLine({
+			div: loadingLineDiv,
+			minWidth: 8
+		});
+
+		// The 'short' way of initializing the widget
+		var loadingLine2 = new LoadingLine({
+			div: $('#loading-line2'),
+			percent: 0,
+			minWidth: 8
+		});
+
+
+		// Simulate some data loading or whatever
+
+		pretendToDoStuff();
+		var count = 0;
+
+		function pretendToDoStuff() {
+			pretendToDoSomething(100, 10);
+			pretendToDoSomething(144, 10);
+			pretendToDoSomething(240, 10);
+			pretendToDoSomething(400, 10);
+			pretendToDoSomething(180, 20);
+			pretendToDoSomething(480, 20);
+			pretendToDoSomething(600, 20);
+		}
+
+		function pretendToDoSomething(time, percent) {
+			setTimeout(function() {
+
+				loadingLine2.addPercent(percent);
+				if (++count === 7) doItAgain();
+
+			}, time);
+		}
+
+		function doItAgain() {
+			setTimeout(function() {
+				loadingLine2.setPercent(0);
+				count = 0;
+				pretendToDoStuff();
+			}, 500);
+		}
+
+	</script>
+</body>
+</html>
