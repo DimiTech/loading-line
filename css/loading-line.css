@@ -21,7 +21,7 @@
 .loading-line-head { 
 	position: relative;
     width: 20px;
-    height: 10px;
+    height: 100%;
 	left: calc(100% - 20px);
 
     border-radius: 50%;
