@@ -4,4 +4,4 @@ A handy simple loading widget. To get started quickly download the repo and chec
 
 Some of the ways you can use it:
 
-![Screenshot](https://github.com/Dusan-Dimitric/loading-line/blob/master/demo/demos.png)
+![Screenshot](https://github.com/DusanDimitric/loading-line/blob/master/demo/demos.png)
