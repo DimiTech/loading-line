@@ -1,5 +1,7 @@
 (function(global) {
-
+	
+	"use strict";
+	
 	/**
 	*	Widget constructor
 	*
