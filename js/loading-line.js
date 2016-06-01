@@ -9,6 +9,7 @@
 	*	@param {Object} options - Options for initializing the component
 	*	@param {Object} options.div - The div element which will contain the widget
 	*	@param {Number} options.percent - A number from 0 to 100 which will set the initial widget percentage
+	*	@param {Number} options.minWidth - Minimum loading line width (0 - 100, 0 is default)
 	*
 	*/
 	var LoadingLine = function(options) {
